@@ -1,0 +1,10 @@
+- insert:
+    - id: deepseek-usage
+      name: '@local/deepseek-usage'
+      config:
+        # Credential reference resolved by the Harness credential service. The
+        # default profile already stores the official DeepSeek key here.
+        credentialRef: DEEPSEEK_API_KEY
+        pollSeconds: 5
+        balanceTtlSeconds: 60
+        scanIntervalSeconds: 300

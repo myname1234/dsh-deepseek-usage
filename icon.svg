@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="DeepSeek Usage">
+  <defs>
+    <linearGradient id="bg" x1="8" y1="6" x2="56" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1E6BFF"/>
+      <stop offset="1" stop-color="#00A6A6"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="18" y1="12" x2="44" y2="52" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity=".98"/>
+      <stop offset="1" stop-color="#DDF7FF" stop-opacity=".9"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="56" height="56" rx="15" fill="url(#bg)"/>
+  <rect x="4.5" y="4.5" width="55" height="55" rx="14.5" fill="none" stroke="#FFFFFF" stroke-opacity=".18"/>
+  <g fill="none" stroke="url(#shine)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M15 45V35.5"/>
+    <path d="M25 45V29"/>
+    <path d="M35 45V37.5"/>
+    <path d="M45 45V21"/>
+    <path d="M14 27.5 23.5 18l8 6.5L46 13.5" stroke-width="2.6" stroke-opacity=".95"/>
+    <path d="M40.5 13.5H46v5.5" stroke-width="2.6" stroke-opacity=".95"/>
+  </g>
+</svg>
