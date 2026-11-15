@@ -47,13 +47,44 @@ line is supplied here; the maintainers accept a missing translation too. The
 
 ## Pull request
 
-1. Push this package to `https://github.com/myname1234/dsh-deepseek-usage`.
-2. Add the `dsh-plugin` topic in the repository settings.
-3. Wait until the repository is at least 24 hours old (the CI gate checks it).
-4. Fork `awesome-dsh-plugin/awesome-dsh-plugin`.
-5. Add exactly one file, `data/plugins/myname1234__dsh-deepseek-usage.yml`.
-6. Open a PR against `main`; do not edit the generated READMEs.
-7. Push corrections to the same branch if CI or a maintainer asks.
+1. Create a **public** repository named `dsh-deepseek-usage` under
+   `myname1234`: <https://github.com/new?name=dsh-deepseek-usage&visibility=public>.
+   Do not initialize it with a README; this checkout already has one.
+2. Push this checkout:
+
+   ```powershell
+   cd D:\workspace\dsh-deepseek-usage-app
+   git push -u origin main
+   ```
+
+3. Add the `dsh-plugin` topic in the repository settings.
+4. Wait until the repository is at least 24 hours old (the CI gate checks it).
+5. Fork `awesome-dsh-plugin/awesome-dsh-plugin` in the GitHub UI.
+6. Push the prepared submission branch to your fork:
+
+   ```powershell
+   cd D:\workspace\awesome-dsh-plugin
+   git remote rename origin upstream
+   git remote add origin https://github.com/myname1234/awesome-dsh-plugin.git
+   git push -u origin add-deepseek-usage-dashboard
+   ```
+
+7. Open the pull request:
+
+   <https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/compare/main...myname1234:add-deepseek-usage-dashboard?expand=1>
+
+   Use this PR body:
+
+   ```markdown
+   Adds `myname1234/dsh-deepseek-usage` to Usage & Billing.
+
+   - Installs with `dsh plugin --profile <profile> add github:myname1234/dsh-deepseek-usage`.
+   - `package.json` declares `dsh.bundle.patch`; plain JavaScript, no build step and no `allowBuilds` approval.
+   - One submission file only: `data/plugins/myname1234__dsh-deepseek-usage.yml`.
+   - The icon is a 180×180 PNG hosted by the plugin repository.
+   ```
+
+8. Push corrections to the same branch if CI or a maintainer asks.
 
 The site and `plugins.json` rebuild automatically after the PR merges.
 
